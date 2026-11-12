@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mente en Equilibrio | Bienestar Emocional</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <div class="logo-icon">M</div>
+                    <span>Mente en Equilibrio</span>
+                </div>
+                <button class="mobile-close" id="mobile-close">&times;</button>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="active" data-view="dashboard">
+                        <a href="#"><i class="nav-icon">📊</i> Dashboard</a>
+                    </li>
+                    <li data-view="emotions">
+                        <a href="#"><i class="nav-icon">🎭</i> Mis Emociones</a>
+                    </li>
+                    <li data-view="journal">
+                        <a href="#"><i class="nav-icon">📖</i> Diario Personal</a>
+                    </li>
+                    <li data-view="breathing">
+                        <a href="#"><i class="nav-icon">🧘</i> Respiración</a>
+                    </li>
+                    <li data-view="wellness">
+                        <a href="#"><i class="nav-icon">✨</i> Actividades</a>
+                    </li>
+                    <li data-view="stats">
+                        <a href="#"><i class="nav-icon">📈</i> Estadísticas</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <li data-view="settings">
+                    <a href="#"><i class="nav-icon">⚙️</i> Configuración</a>
+                </li>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="top-header">
+                <div class="header-left">
+                    <button class="mobile-menu-btn" id="mobile-menu-btn">☰</button>
+                    <div class="welcome-text">
+                        <h2 id="header-greeting">¡Hola, Usuario!</h2>
+                        <p id="header-date">Jueves, 5 de noviembre</p>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <button id="theme-toggle" class="icon-btn" title="Cambiar tema">🌓</button>
+                    <div class="user-profile">
+                        <div class="avatar" id="user-avatar">U</div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- View Container -->
+            <div id="view-container" class="view-container">
+                <!-- Views will be injected here via app.js -->
+            </div>
+        </main>
+    </div>
+
+    <!-- Modals / Overlays -->
+    <div id="modal-overlay" class="modal-overlay hidden"></div>
+
+    <!-- Scripts -->
+    <script src="js/storage.js"></script>
+    <script src="js/emotions.js"></script>
+    <script src="js/journal.js"></script>
+    <script src="js/breathing.js"></script>
+    <script src="js/wellness.js"></script>
+    <script src="js/statistics.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
